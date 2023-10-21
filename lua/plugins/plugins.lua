@@ -275,21 +275,45 @@ return {
     "octol/vim-cpp-enhanced-highlight"
   },
   {
-    "karb94/neoscroll.nvim",
- --       require('neoscroll').setup()
+        "karb94/neoscroll.nvim",
+        event = "WinScrolled",
+        config = function()
+        require('neoscroll').setup({
+              -- All these keys will be mapped to their corresponding default scrolling animation
+              mappings = {'<C-u>', '<C-d>', '<C-b>', '<C-f>',
+              '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
+              hide_cursor = true,          -- Hide cursor while scrolling
+              stop_eof = true,             -- Stop at <EOF> when scrolling downwards
+              use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+              respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+              cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+              easing_function = nil,        -- Default easing function
+              pre_hook = nil,              -- Function to run before the scrolling animation starts
+              post_hook = nil,              -- Function to run after the scrolling animation ends
+              })
+        end
   },
   {
     "terryma/vim-multiple-cursors"
   },
   {
-  'smoka7/hop.nvim',
-  version = "*",
-  opts = {},
+       'smoka7/hop.nvim',
+       version = "*",
   },
-
   {
       'akinsho/bufferline.nvim',
       version = "*",
-      dependencies = 'nvim-tree/nvim-web-devicons'
+      dependencies = 'nvim-tree/nvim-web-devicons',
+      options = {
+          termguicolors = true,
+          color_icons = true,
+          show_tab_indicators = true,
+          separator_style =  "padded_slant",
+          hover = {
+              enabled = true,
+              delay = 150,
+              reveal = "close",
+          },
+      },
   },
 }
