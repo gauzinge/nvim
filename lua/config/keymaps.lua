@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("v", "jk", "<Esc>")
+--vim.keymap.del("n", "<leader>w")
 vim.keymap.set("n", "<leader>w", "<cmd>w!<cr><esc>")
 vim.keymap.set("n", "<leader>h", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<leader>k", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
