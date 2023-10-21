@@ -22,3 +22,11 @@ vim.keymap.set("n", "t", "<cmd>HopPattern<cr>", { noremap = true })
 -- Add mappings for scrolling
 vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>scroll(-20, true)<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "<cmd>scroll(20, true)<cr>", { noremap = true, silent = true })
+--local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
+--vim.keymap.set(
+--"i",
+--"<TAB>",
+--'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
+--opts
+--)
+--vim.keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
