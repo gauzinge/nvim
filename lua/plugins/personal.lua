@@ -49,7 +49,7 @@ return {
               right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
         diagnostics = "nvim_lsp",
         always_show_bufferline = true,
-        color_icons = false,
+        color_icons = true,
         show_tab_indicators = true,
         separator_style = "slant",
         diagnostics_indicator = function(_, _, diag)
