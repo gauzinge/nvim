@@ -13,7 +13,6 @@ vim.keymap.set("v", "ii", "<Esc>")
 --save with leader w
 --quit with leader q
 vim.keymap.set("n", "<leader>w", "<cmd>w!<cr><esc>", { silent = true, noremap = true, desc = "Write File" })
---vim.keymap.set("n", "<leader>q", "<cmd>wq!<cr><esc>", { silent = true, desc = "Write File and quit"})
 
 --buffer navigation
 vim.keymap.set("n", "<leader>h", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
